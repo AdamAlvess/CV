@@ -63,9 +63,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isColliding) {
             updateCharacterPosition();
         }
+        else {
+            // Si une collision est détectée, réinitialisez la position du personnage
+            characterX -= dx;
+            characterY -= dy;
+        }
         checkCollision();
         requestAnimationFrame(moveCharacter);
     }
+
     
     // Détecter les touches pressées
     document.addEventListener('keydown', function(event) {
