@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     const gameContainer = document.getElementById('game-container');
     
-    /*// Créer et ajouter les murs invisibles au conteneur de jeu
+    // Créer et ajouter les murs invisibles au conteneur de jeu
     walls.forEach(wall => {
         const wallElement = document.createElement('div');
         wallElement.className = 'invisible-wall';
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
         wallElement.style.width = `${wall.width}%`;
         wallElement.style.height = `${wall.height}%`;
         gameContainer.appendChild(wallElement);
-    });*/
+    });
     
     // Définir le personnage
     const character = document.getElementById('character');

@@ -23,6 +23,14 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/*.invisible-wall {
+    position: absolute;
+    background-color: black; /* Couleur du fond noir 
+    width: 100%; /* Largeur à 100% du parent
+    height: 100%; Hauteur à 100% du parent 
+    pointer-events: none; /* Les murs invisibles ne doivent pas être cliquables 
+    z-index: 1; Mettre les murs invisibles en premier plan 
+}*/
 
 
 
