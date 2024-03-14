@@ -1,85 +1,80 @@
 document.addEventListener('DOMContentLoaded', function() {
     const walls = [
+        
         {
-          x: 85,
+          x: 81,
           y: 0,
-          width: 20,
+          width: 20, // droite
           height: 100,
         },
         {
-          x: 79,
-          y: 0,
-          width: 20, // droite
-          height: 75,
-        },
-        {
-          x: 75,
+          x: 77,
           y: 0,
           width: 20,
-          height: 44,
+          height: 60,
         },
         {
-          x: 18,
-          y: 91,
+          x: 21,
+          y: 73,
           width: 67,
-          height: 25,
+          height: 40,
         },
         {
-          x: 35,
-          y: 84, // bas
-          width: 25,
+          x: 37,
+          y: 67, // bas
+          width: 22,
           height: 25,
         },
         {
           x: 0,
-          y: 93,
+          y: 80,
           width: 30,
           height: 25,
         },
         {
           x: 0,
           y: 0,
-          width: 12,
+          width: 13,
           height: 100,
         },
         {
           x: 0,
           y: 0,
-          width: 16,
-          height: 75,
+          width: 14,
+          height: 72,
         },
         {
           x: 0,
           y: 0, // gauche
-          width: 20,
-          height: 45,
+          width: 19,
+          height: 57,
         },
         {
           x: 0,
           y: 0,
-          width: 24,
-          height: 31,
+          width: 22,
+          height: 27,
         },
         {
           x: 20,
           y: 0,
           width: 70,
-          height: 11,
+          height: 1,
         },
         {
           x: 60,
           y: 0,
           width: 30,
-          height: 18,
+          height: 7,
         },
         {
-          x: 68,
+          x: 67,
           y: 0,
           width: 30,
-          height: 22,
+          height: 13,
         },
         {
-          x: 71,
+          x: 74,
           y: 0,
           width: 32,
           height: 30, //haut
@@ -87,19 +82,19 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           x: 20,
           y: 0,
-          width: 30,
-          height: 17,
+          width: 28,
+          height: 8,
         },
         {
           x: 20,
           y: 0,
           width: 12,
-          height: 23,
+          height: 14,
         },
     ];
     const gameContainer = document.getElementById('game-container');
     
-    /*// Créer et ajouter les murs invisibles au conteneur de jeu
+     /*//Créer et ajouter les murs invisibles au conteneur de jeu
     walls.forEach(wall => {
         const wallElement = document.createElement('div');
         wallElement.className = 'invisible-wall';
