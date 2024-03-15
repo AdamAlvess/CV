@@ -99,25 +99,14 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     const gameContainer = document.getElementById('game-container');
     
-    /*// Créer et ajouter les murs invisibles au conteneur de jeu
-    walls.forEach(wall => {
-        const wallElement = document.createElement('div');
-        wallElement.className = 'invisible-wall';
-        wallElement.style.left = `${wall.x}%`;
-        wallElement.style.top = `${wall.y}%`;
-        wallElement.style.width = `${wall.width}%`;
-        wallElement.style.height = `${wall.height}%`;
-        gameContainer.appendChild(wallElement);
-    });*/
-    
     // Définir le personnage
     const character = document.getElementById('character');
     let characterX = 50;
     let characterY = 50;
-    let dx = 0; // Changement horizontal de la position du personnage
-    let dy = 0; // Changement vertical de la position du personnage
-    let isColliding = false; // Variable pour vérifier si une collision est en cours
-    
+    let dx = 0; 
+    let dy = 0;
+    let isColliding = false;
+
     // Fonction de mise à jour de la position du personnage
     function updateCharacterPosition() {
         characterX += dx;
@@ -135,11 +124,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 characterY + dy >= wall.y &&
                 characterY + dy <= wall.y + wall.height
             ) {
-                isColliding = true; // Collision détectée
+                isColliding = true; 
                 return;
             }
         }
-        isColliding = false; // Pas de collision
+        isColliding = false; 
     }
     
     // Fonction de mouvement du personnage
@@ -164,22 +153,22 @@ document.addEventListener('DOMContentLoaded', function() {
         switch(key) {
             case 'ArrowUp':
                 if (!isColliding) {
-                    dy = -0.5; // Changer la vitesse verticale
+                    dy = -0.5; 
                 }
                 break;
             case 'ArrowDown':
                 if (!isColliding) {
-                    dy = 0.5; // Changer la vitesse verticale
+                    dy = 0.5; 
                 }
                 break;
             case 'ArrowLeft':
                 if (!isColliding) {
-                    dx = -0.5; // Changer la vitesse horizontale
+                    dx = -0.5; 
                 }
                 break;
             case 'ArrowRight':
                 if (!isColliding) {
-                    dx = 0.5; // Changer la vitesse horizontale
+                    dx = 0.5; 
                 }
                 break;
             default:
@@ -194,18 +183,17 @@ document.addEventListener('DOMContentLoaded', function() {
         switch(key) {
             case 'ArrowUp':
             case 'ArrowDown':
-                dy = 0; // Arrêter le mouvement vertical
+                dy = 0; 
                 break;
             case 'ArrowLeft':
             case 'ArrowRight':
-                dx = 0; // Arrêter le mouvement horizontal
+                dx = 0; 
                 break;
             default:
                 break;
         }
     });
     
-    // Début du mouvement du personnage
     moveCharacter();
 });
 
